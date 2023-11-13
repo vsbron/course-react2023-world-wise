@@ -5,8 +5,10 @@ React SPA that lets the user to save the list of cities/countries he visited pre
 ## Features
 
 - Simple navigation that tracks what page you're currently on;
+- The app screen with the some cities already in the list;
 
 ## Details
 
 - Navigation in SPA is handled by React Router;
 - Stylesheets are written using CSS Modules;
+- Cities are fetched from fake API using json-server (Must run "npm run server" for app to work);

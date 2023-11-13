@@ -4,8 +4,10 @@ import Logo from "./Logo";
 
 function PageNav() {
   return (
-    <nav class={styles.nav}>
+    <nav className={styles.nav}>
       <Logo />
+
+      {/* App navigation */}
       <ul>
         <li>
           <NavLink to="/pricing">Pricing</NavLink>

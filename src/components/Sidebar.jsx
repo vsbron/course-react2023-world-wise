@@ -10,6 +10,7 @@ function Sidebar() {
       <Logo />
       <AppNav />
 
+      {/* Outlet element with the content passed in on App component inside Nested Routes */}
       <Outlet />
       <Footer />
     </div>
