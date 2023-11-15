@@ -30,7 +30,7 @@ function CountryList({ cities, isLoading }) {
     <ul className={styles.countryList}>
       {/* Iterating through cities array and passing it to CityItem */}
       {countries.map((country) => (
-        <CountryItem country={country} />
+        <CountryItem country={country} key={country.country} />
       ))}
     </ul>
   );
