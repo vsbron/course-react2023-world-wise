@@ -2,8 +2,12 @@ import styles from "./CityList.module.css";
 import CityItem from "./CityItem";
 import Message from "./Message";
 import Spinner from "./Spinner";
+import { useCities } from "../context/CitiesContext";
 
-function CityList({ cities, isLoading }) {
+function CityList() {
+  // Getting the value from the Context API using custom hook
+  const { cities, isLoading } = useCities();
+
   // If list is still being loaded, display the spinner
   if (isLoading) return <Spinner />;
 
