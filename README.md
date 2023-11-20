@@ -7,6 +7,7 @@ React SPA that lets the user to save the list of cities/countries he visited pre
 - Simple navigation that tracks what page you're currently on;
 - The app screen with the visited cities on the left;
 - The app screen with the map on the right side;
+- Option to add or delete city from the list;
 
 ## Details
 

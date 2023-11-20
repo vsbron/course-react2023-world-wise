@@ -1,4 +1,5 @@
 import { createContext, useContext, useEffect, useState } from "react";
+import Spinner from "../components/Spinner";
 
 const BASE_URL = "http://localhost:8000";
 
@@ -42,6 +43,45 @@ function CitiesProvider({ children }) {
     }
   }
 
+  async function createCity(newCity) {
+    try {
+      // Setting the IsLoading state
+      setIsLoading(true);
+
+      // Fetching the new city data with POST request
+      const res = await fetch(`${BASE_URL}/cities`, {
+        method: "POST",
+        body: JSON.stringify(newCity),
+        headers: { "Content-Type": "application/json" },
+      });
+      const data = await res.json();
+
+      // Updating the cities array with the new City
+      setCities((cities) => [...cities, data]);
+    } catch {
+      alert("There was an error creating city");
+    } finally {
+      setIsLoading(false);
+    }
+  }
+
+  async function deleteCity(id) {
+    try {
+      // Setting the IsLoading state
+      setIsLoading(true);
+
+      // Deleting the city from API with POST request
+      await fetch(`${BASE_URL}/cities/${id}`, { method: "DELETE" });
+
+      // Filtering the city array to remove deleted city
+      setCities((cities) => cities.filter((city) => city.id !== id));
+    } catch {
+      alert("There was an error deleting city");
+    } finally {
+      setIsLoading(false);
+    }
+  }
+
   return (
     <CitiesContext.Provider
       value={{
@@ -49,6 +89,8 @@ function CitiesProvider({ children }) {
         isLoading,
         currentCity,
         getCity,
+        createCity,
+        deleteCity,
       }}
     >
       {children}
