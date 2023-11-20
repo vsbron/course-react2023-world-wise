@@ -15,3 +15,4 @@ React SPA that lets the user to save the list of cities/countries he visited pre
 - Stylesheets are written using CSS Modules;
 - Cities are fetched from fake API using json-server (Must run "npm run server" for app to work);
 - State is managed by Context API custom component;
+- Map is rendered with Leaflet API;
