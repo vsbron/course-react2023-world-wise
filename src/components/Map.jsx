@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useNavigate, useSearchParams } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import {
   MapContainer,
   TileLayer,
@@ -14,13 +14,9 @@ import { useGeolocation } from "../hooks/useGeolocation";
 
 import styles from "./Map.module.css";
 import Button from "./Button";
+import { useUrlPosition } from "../hooks/useURLPosition";
 
 function Map() {
-  // Getting and pulling the Query String value from URL using useSearchParams hook
-  const [searchParams] = useSearchParams();
-  const mapLat = searchParams.get("lat");
-  const mapLng = searchParams.get("lng");
-
   // Getting the cities from the Context API
   const { cities } = useCities();
 
@@ -31,10 +27,15 @@ function Map() {
     getPosition,
   } = useGeolocation();
 
+  // Getting the lat and lng from URL using custom hook
+  const [mapLat, mapLng] = useUrlPosition();
+
+  // useEffect function that recenters map when new location is clicked
   useEffect(() => {
     if (mapLat && mapLng) setMapPosition([mapLat, mapLng]);
   }, [mapLat, mapLng]);
 
+  // useEffect function that recenters map when getting user's geolocation
   useEffect(() => {
     if (geolocationPosition)
       setMapPosition([geolocationPosition.lat, geolocationPosition.lng]);
@@ -76,13 +77,14 @@ function Map() {
   );
 }
 
-// Component that recenters the map with the coordinates of the new city
+// Helper component that recenters the map with the coordinates of the new city
 function ChangeCenter({ position }) {
   const map = useMap();
   map.setView(position);
   return null;
 }
 
+// Helper component that detects user's click
 function DetectClick() {
   // Getting the function from useNavigate hook, to redirect the user
   const navigate = useNavigate();
