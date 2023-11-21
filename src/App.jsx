@@ -6,6 +6,7 @@ import Login from "./pages/Login";
 import PageNotFound from "./pages/PageNotFound";
 import Pricing from "./pages/Pricing";
 import Product from "./pages/Product";
+import ProtectedRoute from "./pages/ProtectedRoute";
 
 import City from "./components/City";
 import CityList from "./components/CityList";
@@ -27,8 +28,15 @@ function App() {
             <Route path="pricing" element={<Pricing />} />
             <Route path="login" element={<Login />} />
 
-            {/* App path with Nested routes */}
-            <Route path="app" element={<AppLayout />}>
+            {/* App path with Nested routes that is wrapped inside protected route component */}
+            <Route
+              path="app"
+              element={
+                <ProtectedRoute>
+                  <AppLayout />
+                </ProtectedRoute>
+              }
+            >
               {/* Default route that redirects to the "cities" */}
               <Route index element={<Navigate replace to="cities" />} />
 
