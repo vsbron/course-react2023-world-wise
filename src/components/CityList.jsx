@@ -1,8 +1,10 @@
-import styles from "./CityList.module.css";
 import CityItem from "./CityItem";
 import Message from "./Message";
 import Spinner from "./Spinner";
+
 import { useCities } from "../context/CitiesContext";
+
+import styles from "./CityList.module.css";
 
 function CityList() {
   // Getting the value from the Context API using custom hook

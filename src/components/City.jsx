@@ -26,9 +26,12 @@ function City() {
     getCity(id);
   }, [id]);
 
+  // Destructuring currentCity variable
   const { cityName, emoji, date, notes } = currentCity;
 
+  // If app is in Loading state - return immediately
   if (isLoading) return <Spinner />;
+
   return (
     <div className={styles.city}>
       <div className={styles.row}>

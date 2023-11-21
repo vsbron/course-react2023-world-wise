@@ -1,8 +1,10 @@
-import styles from "./CountryList.module.css";
 import CountryItem from "./CountryItem";
 import Message from "./Message";
 import Spinner from "./Spinner";
+
 import { useCities } from "../context/CitiesContext";
+
+import styles from "./CountryList.module.css";
 
 function CountryList() {
   // Getting the value from the Context API using custom hook

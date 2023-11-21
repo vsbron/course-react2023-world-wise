@@ -1,3 +1,328 @@
 {
-  "cities": []
+  "cities": [
+    {
+      "cityName": "Rome",
+      "country": "Italy",
+      "emoji": "🇮🇹",
+      "date": "2023-11-21T11:32:45.725Z",
+      "notes": "",
+      "position": {
+        "lat": "41.89205502378826",
+        "lng": "12.488021850585938"
+      },
+      "id": 1
+    },
+    {
+      "cityName": "Berlin",
+      "country": "Germany",
+      "emoji": "🇩🇪",
+      "date": "2023-11-21T11:32:54.002Z",
+      "notes": "",
+      "position": {
+        "lat": "52.51622086393074",
+        "lng": "13.381347656250002"
+      },
+      "id": 2
+    },
+    {
+      "cityName": "London",
+      "country": "United Kingdom of Great Britain and Northern Ireland (the)",
+      "emoji": "🇬🇧",
+      "date": "2023-11-21T11:32:58.857Z",
+      "notes": "",
+      "position": {
+        "lat": "51.50874245880335",
+        "lng": "-0.21972656250000003"
+      },
+      "id": 3
+    },
+    {
+      "cityName": "Helsinki",
+      "country": "Finland",
+      "emoji": "🇫🇮",
+      "date": "2023-11-21T11:33:04.350Z",
+      "notes": "",
+      "position": {
+        "lat": "60.130563616914216",
+        "lng": "24.916992187500004"
+      },
+      "id": 4
+    },
+    {
+      "cityName": "Moscow",
+      "country": "Russian Federation (the)",
+      "emoji": "🇷🇺",
+      "date": "2023-11-21T11:33:09.082Z",
+      "notes": "",
+      "position": {
+        "lat": "55.825973254619015",
+        "lng": "37.61718750000001"
+      },
+      "id": 5
+    },
+    {
+      "cityName": "Saint Petersburg",
+      "country": "Russian Federation (the)",
+      "emoji": "🇷🇺",
+      "date": "2023-11-21T11:33:13.328Z",
+      "notes": "",
+      "position": {
+        "lat": "59.94400716933027",
+        "lng": "30.388183593750004"
+      },
+      "id": 6
+    },
+    {
+      "cityName": "Jerusalem",
+      "country": "Israel",
+      "emoji": "🇮🇱",
+      "date": "2023-11-21T11:33:24.952Z",
+      "notes": "",
+      "position": {
+        "lat": "31.77341827300715",
+        "lng": "35.22010803222657"
+      },
+      "id": 7
+    },
+    {
+      "cityName": "Tel Aviv",
+      "country": "Israel",
+      "emoji": "🇮🇱",
+      "date": "2023-11-21T11:33:39.716Z",
+      "notes": "",
+      "position": {
+        "lat": "32.08431989310267",
+        "lng": "34.78271484375001"
+      },
+      "id": 8
+    },
+    {
+      "cityName": "Kemer",
+      "country": "Turkiye",
+      "emoji": "🇹🇷",
+      "date": "2023-11-21T11:34:03.332Z",
+      "notes": "",
+      "position": {
+        "lat": "36.50453095095625",
+        "lng": "30.528602600097656"
+      },
+      "id": 10
+    },
+    {
+      "cityName": "Oral",
+      "country": "Kazakhstan",
+      "emoji": "🇰🇿",
+      "date": "2023-11-21T11:34:38.268Z",
+      "notes": "",
+      "position": {
+        "lat": "51.23440735163461",
+        "lng": "51.39404296875001"
+      },
+      "id": 11
+    },
+    {
+      "cityName": "Tbilisi",
+      "country": "Georgia",
+      "emoji": "🇬🇪",
+      "date": "2023-11-21T11:35:12.807Z",
+      "notes": "",
+      "position": {
+        "lat": "41.701627343789205",
+        "lng": "44.85443115234376"
+      },
+      "id": 12
+    },
+    {
+      "cityName": "Tokyo",
+      "country": "Japan",
+      "emoji": "🇯🇵",
+      "date": "2023-11-21T11:35:27.850Z",
+      "notes": "",
+      "position": {
+        "lat": "35.69745580725804",
+        "lng": "139.80651855468753"
+      },
+      "id": 13
+    },
+    {
+      "cityName": "Osaka",
+      "country": "Japan",
+      "emoji": "🇯🇵",
+      "date": "2023-11-21T11:35:30.251Z",
+      "notes": "",
+      "position": {
+        "lat": "34.69307382947491",
+        "lng": "135.50262451171878"
+      },
+      "id": 14
+    },
+    {
+      "cityName": "Kyoto",
+      "country": "Japan",
+      "emoji": "🇯🇵",
+      "date": "2023-11-21T11:35:45.837Z",
+      "notes": "",
+      "position": {
+        "lat": "34.956025642407134",
+        "lng": "135.73162078857425"
+      },
+      "id": 15
+    },
+    {
+      "cityName": "New York City",
+      "country": "United States of America (the)",
+      "emoji": "🇺🇸",
+      "date": "2023-11-21T11:36:02.944Z",
+      "notes": "",
+      "position": {
+        "lat": "40.711873951908125",
+        "lng": "-74.00390625000001"
+      },
+      "id": 16
+    },
+    {
+      "cityName": "Dubai",
+      "country": "United Arab Emirates (the)",
+      "emoji": "🇦🇪",
+      "date": "2023-11-21T11:37:19.978Z",
+      "notes": "",
+      "position": {
+        "lat": "25.264568475331583",
+        "lng": "55.31066894531251"
+      },
+      "id": 18
+    },
+    {
+      "cityName": "Beijing",
+      "country": "China",
+      "emoji": "🇨🇳",
+      "date": "2023-11-21T11:37:42.631Z",
+      "notes": "",
+      "position": {
+        "lat": "39.90130858574738",
+        "lng": "116.37817382812501"
+      },
+      "id": 19
+    },
+    {
+      "cityName": "Sochi",
+      "country": "Russian Federation (the)",
+      "emoji": "🇷🇺",
+      "date": "2023-11-21T11:38:05.522Z",
+      "notes": "",
+      "position": {
+        "lat": "43.59630591596551",
+        "lng": "39.74304199218751"
+      },
+      "id": 20
+    },
+    {
+      "cityName": "Voronezh",
+      "country": "Russian Federation (the)",
+      "emoji": "🇷🇺",
+      "date": "2023-11-21T11:38:22.370Z",
+      "notes": "",
+      "position": {
+        "lat": "51.67936786087718",
+        "lng": "39.19921875000001"
+      },
+      "id": 21
+    },
+    {
+      "cityName": "Istanbul",
+      "country": "Turkiye",
+      "emoji": "🇹🇷",
+      "date": "2023-11-21T11:49:09.093Z",
+      "notes": "",
+      "position": {
+        "lat": "41.00490496720092",
+        "lng": "28.975582122802738"
+      },
+      "id": 22
+    },
+    {
+      "cityName": "Petrozavodsk",
+      "country": "Russian Federation (the)",
+      "emoji": "🇷🇺",
+      "date": "2023-11-21T11:52:04.232Z",
+      "notes": "",
+      "position": {
+        "lat": "61.78984339034669",
+        "lng": "34.38995361328126"
+      },
+      "id": 23
+    },
+    {
+      "cityName": "Lappeenranta",
+      "country": "Finland",
+      "emoji": "🇫🇮",
+      "date": "2023-11-21T11:52:14.481Z",
+      "notes": "",
+      "position": {
+        "lat": "61.06094350886341",
+        "lng": "28.221130371093754"
+      },
+      "id": 24
+    },
+    {
+      "cityName": "Haifa",
+      "country": "Israel",
+      "emoji": "🇮🇱",
+      "date": "2023-11-21T11:52:23.753Z",
+      "notes": "",
+      "position": {
+        "lat": "32.81901782332612",
+        "lng": "34.99763488769532"
+      },
+      "id": 25
+    },
+    {
+      "cityName": "Beersheba",
+      "country": "Israel",
+      "emoji": "🇮🇱",
+      "date": "2023-11-21T11:52:29.340Z",
+      "notes": "",
+      "position": {
+        "lat": "31.245094830650817",
+        "lng": "34.79782104492188"
+      },
+      "id": 26
+    },
+    {
+      "cityName": "Antalya",
+      "country": "Turkiye",
+      "emoji": "🇹🇷",
+      "date": "2023-11-21T11:52:38.829Z",
+      "notes": "",
+      "position": {
+        "lat": "36.88676047552675",
+        "lng": "30.70610046386719"
+      },
+      "id": 27
+    },
+    {
+      "cityName": "Miami",
+      "country": "United States of America (the)",
+      "emoji": "🇺🇸",
+      "date": "2023-11-21T11:53:32.858Z",
+      "notes": "",
+      "position": {
+        "lat": "25.796181921604585",
+        "lng": "-80.28739929199219"
+      },
+      "id": 28
+    },
+    {
+      "cityName": "Miami Beach",
+      "country": "United States of America (the)",
+      "emoji": "🇺🇸",
+      "date": "2023-11-21T11:53:37.123Z",
+      "notes": "",
+      "position": {
+        "lat": "25.75784610230624",
+        "lng": "-80.06355285644533"
+      },
+      "id": 29
+    }
+  ]
 }

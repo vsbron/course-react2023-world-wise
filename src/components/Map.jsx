@@ -9,14 +9,18 @@ import {
   useMapEvents,
 } from "react-leaflet";
 
+import Button from "./Button";
+
 import { useCities } from "../context/CitiesContext";
 import { useGeolocation } from "../hooks/useGeolocation";
-
-import styles from "./Map.module.css";
-import Button from "./Button";
 import { useUrlPosition } from "../hooks/useURLPosition";
 
+import styles from "./Map.module.css";
+
 function Map() {
+  // Creating the state for the map position
+  const [mapPosition, setMapPosition] = useState([40, 0]);
+
   // Getting the cities from the Context API
   const { cities } = useCities();
 
@@ -40,8 +44,6 @@ function Map() {
     if (geolocationPosition)
       setMapPosition([geolocationPosition.lat, geolocationPosition.lng]);
   }, [geolocationPosition]);
-  // Creating the state for the map position
-  const [mapPosition, setMapPosition] = useState([40, 0]);
 
   return (
     <div className={styles.mapContainer}>
@@ -88,6 +90,7 @@ function ChangeCenter({ position }) {
 function DetectClick() {
   // Getting the function from useNavigate hook, to redirect the user
   const navigate = useNavigate();
+
   useMapEvents({
     click: (e) => {
       navigate(`form?lat=${e.latlng.lat}&lng=${e.latlng.lng}`);

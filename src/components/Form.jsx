@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import DatePicker from "react-datepicker";
 
 import BackButton from "./BackButton";
@@ -6,13 +7,13 @@ import Button from "./Button";
 import Message from "./Message";
 import Spinner from "./Spinner";
 
+import { useCities } from "../context/CitiesContext";
 import { useUrlPosition } from "../hooks/useURLPosition";
 
 import styles from "./Form.module.css";
 import "react-datepicker/dist/react-datepicker.css";
-import { useCities } from "../context/CitiesContext";
-import { useNavigate } from "react-router-dom";
 
+// Helper function that converts country code to flag emoji
 export function convertToEmoji(countryCode) {
   const codePoints = countryCode
     .toUpperCase()
@@ -21,6 +22,7 @@ export function convertToEmoji(countryCode) {
   return String.fromCodePoint(...codePoints);
 }
 
+// Base url for getting the data from clicked position on the map
 const BASE_URL = "https://api.bigdatacloud.net/data/reverse-geocode-client";
 
 function Form() {
@@ -36,9 +38,11 @@ function Form() {
   const [emoji, setEmoji] = useState("");
   const [geocodingError, setGeocodingError] = useState("");
 
-  const { createCity, isLoading } = useCities();
-
+  // Getting the navigate function from useNavigate hook
   const navigate = useNavigate();
+
+  // Getting the state from the Context API
+  const { createCity, isLoading } = useCities();
 
   // useEffect function that gets the info about the clicked area on the map
   useEffect(() => {

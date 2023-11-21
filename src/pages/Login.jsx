@@ -1,6 +1,8 @@
 import { useState } from "react";
-import styles from "./Login.module.css";
+
 import PageNav from "../components/PageNav";
+
+import styles from "./Login.module.css";
 
 export default function Login() {
   // PRE-FILL FOR DEV PURPOSES

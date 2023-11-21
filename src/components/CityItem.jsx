@@ -1,7 +1,10 @@
 import { Link } from "react-router-dom";
-import styles from "./CityItem.module.css";
+
 import { useCities } from "../context/CitiesContext";
 
+import styles from "./CityItem.module.css";
+
+// Helper function to format the date
 const formatDate = (date) =>
   new Intl.DateTimeFormat("en", {
     day: "numeric",
@@ -9,12 +12,15 @@ const formatDate = (date) =>
     year: "numeric",
   }).format(new Date(date));
 
+// CityItem component
 function CityItem({ city }) {
+  // Getting the state from Context API
   const { currentCity, deleteCity } = useCities();
 
   // Destructuring city prop
   const { cityName, emoji, date, id, position } = city;
 
+  // Click handler function
   function handleClick(e) {
     e.preventDefault();
     deleteCity(id);
