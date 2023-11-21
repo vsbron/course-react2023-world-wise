@@ -323,6 +323,42 @@
         "lng": "-80.06355285644533"
       },
       "id": 29
+    },
+    {
+      "cityName": "Mineralnye Vody",
+      "country": "Russian Federation (the)",
+      "emoji": "🇷🇺",
+      "date": "2023-11-21T12:15:28.370Z",
+      "notes": "",
+      "position": {
+        "lat": "44.2105108550444",
+        "lng": "43.128376007080085"
+      },
+      "id": 30
+    },
+    {
+      "cityName": "Neve Ativ",
+      "country": "Israel",
+      "emoji": "🇮🇱",
+      "date": "2023-11-21T12:15:59.012Z",
+      "notes": "",
+      "position": {
+        "lat": "33.30915521302682",
+        "lng": "35.756549835205085"
+      },
+      "id": 31
+    },
+    {
+      "cityName": "Eilat",
+      "country": "Israel",
+      "emoji": "🇮🇱",
+      "date": "2023-11-21T12:16:12.732Z",
+      "notes": "",
+      "position": {
+        "lat": "29.556286347871172",
+        "lng": "34.95042800903321"
+      },
+      "id": 32
     }
   ]
 }
