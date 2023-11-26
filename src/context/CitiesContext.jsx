@@ -1,4 +1,10 @@
-import { createContext, useContext, useEffect, useReducer } from "react";
+import {
+  createContext,
+  useCallback,
+  useContext,
+  useEffect,
+  useReducer,
+} from "react";
 
 const BASE_URL = "http://localhost:8000";
 
@@ -91,28 +97,32 @@ function CitiesProvider({ children }) {
   }, []);
 
   // Function that gets the city's details by fetching its id
-  async function getCity(id) {
-    // If selected city id matched current city's id - return immediately
-    if (Number(id) === currentCity.id) return;
+  // Memoized
+  const getCity = useCallback(
+    async function getCity(id) {
+      // If selected city id matched current city's id - return immediately
+      if (Number(id) === currentCity.id) return;
 
-    // Setting the IsLoading state to true
-    dispatch({ type: "loading" });
+      // Setting the IsLoading state to true
+      dispatch({ type: "loading" });
 
-    try {
-      // Fetching the city with the id
-      const res = await fetch(`${BASE_URL}/cities/${id}`);
-      const data = await res.json();
+      try {
+        // Fetching the city with the id
+        const res = await fetch(`${BASE_URL}/cities/${id}`);
+        const data = await res.json();
 
-      // Setting the new city with received data
-      dispatch({ type: "city/loaded", payload: data });
-    } catch {
-      // Throwing error, disabling isLoading state
-      dispatch({
-        type: "rejected",
-        payload: "There was an error loading city",
-      });
-    }
-  }
+        // Setting the new city with received data
+        dispatch({ type: "city/loaded", payload: data });
+      } catch {
+        // Throwing error, disabling isLoading state
+        dispatch({
+          type: "rejected",
+          payload: "There was an error loading city",
+        });
+      }
+    },
+    [currentCity.id]
+  );
 
   // Function that adds the new city to the state and the Fake API
   async function createCity(newCity) {

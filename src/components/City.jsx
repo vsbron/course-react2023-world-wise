@@ -24,7 +24,7 @@ function City() {
   // Getting the city details when component mounts by calling a function from Context API
   useEffect(() => {
     getCity(id);
-  }, [id]);
+  }, [id, getCity]);
 
   // Destructuring currentCity variable
   const { cityName, emoji, date, notes } = currentCity;
