@@ -18,3 +18,4 @@ React SPA that lets the user to save the list of cities/countries he visited pre
 - Cities are fetched from fake API using json-server (Must run "npm run server" for app to work);
 - Cities and Authentication states are managed by Context API custom components;
 - Map is rendered with Leaflet API;
+- The app uses Code Splitting for better performance;
